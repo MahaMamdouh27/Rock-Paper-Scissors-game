@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  border: none;
+}
+
+body {
+  background-color: #112d4e;
+  color: #fff;
+}
+
+ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+p,
+h1 {
+  margin: 0 !important;
+}
+
+.header {
+  border: white 2px solid;
+  margin-block-start: 30px !important;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title span {
+  font-size: 34px;
+  font-weight: bolder;
+  line-height: 28px;
+}
+
+.scoreContent {
+  background-color: white;
+  color: #0f4c75 !important;
+  width: 120px;
+  border-radius: 10px;
+  padding-block: 10px;
+}
+
+.allBtn {
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  margin: auto;
+  position: relative;
+}
+
+.allBtn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg-triangle.svg);
+  background-size: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.startGame {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.paperBtn,
+.scissorsBtn,
+.rockBtn {
+  background-color: #fff;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+.main .paperBtn,
+.main .scissorsBtn,
+.main .rockBtn {
+  width: 150px;
+}
+
+.paperBtn {
+  border: #3d51e9 20px solid;
+  position: absolute;
+  left: 0;
+  top: -20px;
+}
+
+.scissorsBtn {
+  border: rgb(219, 167, 77) 20px solid;
+  position: absolute;
+  right: 0;
+  top: -20px;
+}
+
+.rockBtn {
+  border: rgb(227, 62, 84) 20px solid;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.allBtnStart {
+  width: fit-content;
+  min-height: 70vh;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pickedBtn,
+#paperRandom {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.paperBtnStart {
+  border: #3d51e9 25px solid;
+}
+.rockBtnStart {
+  border: rgb(219, 167, 77) 25px solid;
+}
+.scissorsBtnStart {
+  border: rgb(227, 62, 84) 25px solid;
+}
+
+#playAgainBtn {
+  background-color: #fff;
+  color: #0f4c75;
+}
+
+.rules {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-inline-end: 80px;
+}
+
+.rulesBtn {
+  background-color: transparent;
+  border: white 1px solid;
+  color: white;
+}
+
+.lightBoxContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.rulesModal {
+  height: 60vh;
+  width: 400px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.rulesHeader {
+  width: 340px !important;
+  color: #0f4c75;
+}
+.rulesHeader i {
+  font-size: 30px;
+  color: gray;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .allBtnStart {
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    margin-right: 5px !important;
+  }
+  .picked {
+    order: 0 !important;
+    width: 180px !important;
+  }
+
+  .housePicked {
+    order: 1 !important;
+    width: 180px !important;
+  }
+
+  .allBtnStart h4{
+    font-size: 20px;
+  }
+
+  .playAgain {
+    order: 2 !important;
+    width: 180px !important;
+  }
+
+  #pickedBtn,
+  #paperRandom {
+    width: 150px !important;
+    aspect-ratio: 1/1;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .allBtnStart {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    margin-block: 20px !important;
+  }
+
+  .picked {
+    order: 0 !important;
+    flex-direction: column-reverse;
+    width: 220px;
+  }
+
+  .housePicked {
+    order: 1 !important;
+    width: 220px;
+  }
+
+  .playAgain {
+    order: 2 !important;
+    width: 220px;
+  }
+
+  .rules {
+    margin: auto !important;
+    margin-block: 20px !important;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors game</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="header col-md-6 m-auto">
+        <div class="d-flex justify-content-between">
+            <div class="title d-flex flex-column align-items-start">
+               <span>ROCK</span>
+               <span>PAPER</span>
+               <span>SCISSORS</span>
+            </div>
+           <div class="scoreContent d-flex flex-column align-items-center justify-content-center">
+                <h6>SCORE</h6>
+                <h1 id="score">0</h1>
+           </div>
+          </div>
+    </div>
+
+    <div class="main d-flex">
+     
+    </div>
+
+    <div class="startGame d-none">
+       
+    </div>
+
+    <div class="allModal">
+        <div class="rules">
+            <button type="button" class="btn rulesBtn px-5">Rules</button>
+        </div>
+
+        <div class="lightBoxContainer d-none">
+            <div class="rulesModal d-flex justify-content-around align-items-center flex-column gap-4 py-4">
+                <div class="rulesHeader d-flex justify-content-between align-items-center">
+                    <h3>Rules</h3>
+                    <i class="fa-solid fa-xmark" id="closeBtn"></i>
+                </div>
+                <div class="rulesImg">
+                    <img src="img/image-rules.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"  type="module"></script></script>
+</body>
+
+</html>
